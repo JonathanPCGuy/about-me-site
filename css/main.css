@@ -1,0 +1,67 @@
+/* Global and semantic items*/
+
+* {
+ font-family: "Verdana", sans-serif;
+ color:#666;
+ font-size:16px;
+ line-height: 200%;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  color:#f07c17;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+/* header item */
+
+.header {
+  padding-top: 25px;
+  padding-left: 15px;
+}
+
+/* left column items */
+
+.left-column {
+  padding: 0px;
+}
+
+.image {
+  padding: 20px 15px 0px;
+}
+
+.highlights {
+  padding: 15px 0;
+}
+
+.highlights-container {
+  margin: 15px;
+  padding: 10px 0;
+  border: solid 1px #ccc;
+}
+
+.highlights-title {
+  padding: 0 30px;
+}
+
+.bullet-points {
+  padding: 20px 30px;
+}
+
+/* right column items */
+
+.right-column {
+  padding: 0;
+}
+
+.article-header {
+  padding: 0 15px;
+}
+
+.article-content {
+  padding: 20px 15px 0px;
+}

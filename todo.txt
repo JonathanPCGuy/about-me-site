@@ -1,0 +1,11 @@
+1. basic layout with placeholder images
+2. ensure responsiveness
+3. add content
+
+after basic layout and look and feel added:
+-find nicer pictures
+-pick good font
+-etc
+
+
+to determine: content in js or directly in html file?
