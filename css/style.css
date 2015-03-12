@@ -12,7 +12,7 @@
   flex-direction: row;
 }
 
-.project-details {
+.project-description {
   display: flex;
   align-items: center;
   justify-content: center;
