@@ -1,54 +1,60 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Jonathan Lam's Website</title>
     <!-- todo: if needed generate new bootstrap-->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
-    <!-- todo: when deploying to public change to hosted jquery-->
-    <script src="js/jQuery.js"></script>
-    <script src="js/helper.js"></script>
-    <script src="js/siteBuilder.js"></script>
-  </head>
-  <body>
+    <!-- todo: move to improve loading speed-->
+    <script src="js/libs/jQuery.js"></script>
+    <script src="js/libs/bootstrap.min.js"></script>
+    <script src="js/libs/knockout-3.3.0.js"></script>
+    <script src="js/data/myinfo.js"></script>
+
+</head>
+
+<body>
     <div class="container">
-      <!-- header part-->
-      <div class="row">
-        <div class="col-md-2 logo">
-          <img src="http://placehold.it/96x96">
+        <!-- header part-->
+        <div class="row">
+            <div class="col-md-2 logo">
+                <img src="http://placehold.it/96x96">
+            </div>
+            <div class="col-md-10 name-title">
+                <h1>Jonathan Lam</h1>
+                <h2>Software Engineer</h2>
+            </div>
         </div>
-        <div class="col-md-10 name-title">
-          <h1>Jonathan Lam</h1>
-          <h2>Software Engineer</h2>
+        <!-- menu part-->
+        <div class="row">
+            <div class="col-md-6 main-image">
+                <!-- cool picture representing me-->
+                <img src="http://placehold.it/576x320">
+            </div>
+            <div class="col-md-6 menu-items" data-bind="foreach: menuItems">
+                <!-- hi-res assets? -->
+                <div class="col-md-6 menu-item">
+                    <!-- about me -->
+                    <div class="menu-title" data-bind: "text: title"></div>
+                    <img data-bind="attr:{ src: image}">
+                    <!-- to insert - link -->
+                </div>
+            </div>
         </div>
-      </div>
-      <!-- menu part-->
-      <div class="row">
-        <div class="col-md-6 main-image">
-          <img src="http://placehold.it/576x320">
+        <!-- content part-->
+        <div id="projects" data-bind="foreach: projects">
+            <div data-bind: "text: title"></div>
         </div>
-        <div class="col-md-6 menu-items">
-          <!-- hi-res assets? -->
-          <div class="col-md-6 menu-item">
-            <img src="http://placehold.it/192x128">
-          </div>
-          <div class="col-md-6 menu-item">
-            <img src="http://placehold.it/192x128">
-          </div>
-          <div class="col-md-6 menu-item">
-            <img src="http://placehold.it/192x128">
-          </div>
-          <div class="col-md-6 menu-item">
-            <img src="http://placehold.it/192x128">
-          </div>
+
+        <div class="work">
         </div>
-      </div>
-      <!-- content part-->
-      <div id ="projects">
-      </div>
+
+        <div class="contact"></div>
     </div>
-  </body>
-  <!-- footer? -->
+</body>
+<!-- footer? -->
+
 </html>

@@ -1,11 +1,15 @@
-1. basic layout with placeholder images
-2. ensure responsiveness
-3. add content
+1. maybe make this mvc (knockout? static?)
+- will use knockout, jquery, bootstrap
+- add in compliation and web site optimization
 
-after basic layout and look and feel added:
--find nicer pictures
--pick good font
--etc
+2. will not make site super-fancy, rather use it to show who i am (average, adaptable programmer)
 
-to determine: what to use from bootstrap (menu, navi, etc)
-to determine: content in js or directly in html file?
+3.
+
+What I need:
+-link to major project highlights (nano deg, touchpoint)
+-link to git hub
+-link to linked in
+-contact link (pcguy e-mail)
+-skill highlights
+-30-second speech
