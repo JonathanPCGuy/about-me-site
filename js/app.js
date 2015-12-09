@@ -1,2 +1,3 @@
-
-ko.applyBindings(new AboutMeViewModel());
+$(function () {
+    ko.applyBindings(new AboutMeViewModel());
+});

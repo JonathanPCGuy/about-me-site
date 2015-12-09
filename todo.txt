@@ -1,3 +1,6 @@
+first goal: get project display working (even if ugly)
+
+
 1. maybe make this mvc (knockout? static?)
 - will use knockout, jquery, bootstrap
 - add in compliation and web site optimization

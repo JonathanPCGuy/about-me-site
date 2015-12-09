@@ -12,7 +12,13 @@
     <script src="js/libs/jQuery.js"></script>
     <script src="js/libs/bootstrap.min.js"></script>
     <script src="js/libs/knockout-3.3.0.js"></script>
-    <script src="js/data/myinfo.js"></script>
+    <!-- these should be compiled into 1-->
+    <script src="js/data/work.js"></script>
+    <script src="js/data/fenano.js"></script>
+    <script src="js/data/navigation.js"></script>
+    <script src="js/data/contact.js"></script>
+    <script src="js/viewmodels/aboutme.js"></script>
+    <script src="js/app.js"></script>
 
 </head>
 
@@ -38,7 +44,7 @@
                 <!-- hi-res assets? -->
                 <div class="col-md-6 menu-item">
                     <!-- about me -->
-                    <div class="menu-title" data-bind: "text: title"></div>
+                    <div class="menu-title" data-bind="text: title"></div>
                     <img data-bind="attr:{ src: image}">
                     <!-- to insert - link -->
                 </div>
@@ -46,13 +52,17 @@
         </div>
         <!-- content part-->
         <div id="projects" data-bind="foreach: projects">
-            <div data-bind: "text: title"></div>
+            <div data-bind= "text: title"></div>
+            <div data-bind="text: dates"></div>
+            <div data-bind="text: description"></div>
         </div>
 
-        <div class="work">
+        <div class="contact" data-bind="foreach: contacts">
+            <a target="_blank" data-bind="text:title, attr:{href: url }"></a>
+            <img data-bind="attr:{src:logo}">
         </div>
 
-        <div class="contact"></div>
+        <div class="aboutMe" data-bind="text: aboutMeText"></div>
     </div>
 </body>
 <!-- footer? -->
