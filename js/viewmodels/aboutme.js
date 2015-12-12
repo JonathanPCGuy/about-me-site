@@ -12,6 +12,31 @@ jlamapp.AboutMeViewModel = function () {
 
     this.menuItems = ko.observableArray(jlamapp.navigation.menuItems);
 
+    // TODO: single-page "print" view
+
+    // null - nothing (initial page load)
+    // "all" - show all (to be done)
+    this.activeMenuItem = ko.observable();
+
+    this.setActiveMenuItem = ko.computed(function() {
+        if(self.activeMenuItem === null) {
+            // don't do anything?
+        }
+        else if (self.activeMenuItem === "all") {
+            // to be implemented
+        }
+        else
+        {
+            // show one, hide the rest
+        }
+    });
+
+
+
+    this.navigate = function(clickedItem) {
+
+    };
+
     this.projects = ko.observableArray();
 
     this.contacts = ko.observableArray(jlamdata.contact.contacts);
