@@ -1,6 +1,6 @@
 // i won't list all here; i will add link to see more
-
-var fenanoProjects = {
+var jlamdata = jlamdata || {};
+jlamdata.fenanoProjects = {
     "projects": [
         {
             "type": "fenano",

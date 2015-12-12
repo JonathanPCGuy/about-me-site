@@ -1,3 +1,3 @@
 $(function () {
-    ko.applyBindings(new AboutMeViewModel());
+    ko.applyBindings(new jlamapp.AboutMeViewModel());
 });

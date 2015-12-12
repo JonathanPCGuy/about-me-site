@@ -1,5 +1,24 @@
-// should add scope
-var workProjects = {
+var jlamdata = jlamdata || {};
+
+jlamdata.workHistory = [
+
+    {
+        "employer": "Hewlett-Packard",
+        "title": "Software Engineer",
+        "location": "Houston, TX",
+        "dates": "May 2007 - November 2013",
+        "description": "Manageability Software"
+    },
+    {
+        "employer": "Hewlett-Packard",
+        "title": "Senior Software Engineer",
+        "location": "Houston, TX",
+        "dates": "November 2013 - current",
+        "description": "Manageability Software"
+    }
+];
+
+jlamdata.workProjects = {
 
     "projects": [
         {
