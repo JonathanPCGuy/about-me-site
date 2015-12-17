@@ -45,9 +45,10 @@
                 <div class="row" data-bind="foreach: menuItems">
                 <!-- hi-res assets? -->
                 <div class="col-md-3 menu-item">
-                    <!-- TODO: get navigation working-->
-                    <div class="menu-title" data-bind="text: title, click: $parent.navigate"></div>
+                    <a href="#" data-bind="click: $parent.navigate">
+                    <div class="menu-title" data-bind="text: title"></div>
                     <img data-bind="attr:{ src: image}">
+                    </a>
                     <!-- to insert - link -->
                 </div>
                 </div>
@@ -55,18 +56,18 @@
         </div>
         <!-- content part-->
         <!-- TODO: add filter to only show highlighted projects-->
-        <div class="projects" data-bind="foreach: projects">
+        <div class="projects hidden" data-bind="foreach: projects">
             <div data-bind= "text: title"></div>
             <div data-bind="text: dates"></div>
             <div data-bind="text: description"></div>
         </div>
 
-        <div class="contact" data-bind="foreach: contacts">
+        <div class="contact hidden" data-bind="foreach: contacts">
             <a target="_blank" data-bind="text:title, attr:{href: url }"></a>
             <img data-bind="attr:{src:logo}">
         </div>
 
-        <div class="aboutMe">
+        <div class="aboutMe hidden">
             <div data-bind="text: aboutMeText"></div>
             <div class="workHistory" data-bind="foreach:jlamdata.workHistory">
                 <div class="workItem">
@@ -78,6 +79,8 @@
                 </div>
             </div>
 
+    </div>
+    <div class="tbd hidden">
     </div>
 </body>
 <!-- footer? -->

@@ -9,7 +9,7 @@ jlamapp.AboutMeViewModel = function () {
         { 'key': 'hpwork', 'displayName': 'HP Inc.' }
     ]);
 
-
+    // this seems to create a "pointer" to the underlying object
     this.menuItems = ko.observableArray(jlamapp.navigation.menuItems);
 
     // TODO: single-page "print" view
@@ -18,23 +18,39 @@ jlamapp.AboutMeViewModel = function () {
     // "all" - show all (to be done)
     this.activeMenuItem = ko.observable();
 
-    this.setActiveMenuItem = ko.computed(function() {
-        if(self.activeMenuItem === null) {
+    this.setActiveMenuItem = ko.computed(function () {
+        if (self.activeMenuItem() === "undefined") {
             // don't do anything?
         }
-        else if (self.activeMenuItem === "all") {
+        else if (self.activeMenuItem() === "all") {
             // to be implemented
         }
-        else
-        {
+        else {
             // show one, hide the rest
+            var targetClass = '.' + self.activeMenuItem();
+            $(targetClass).removeClass('hidden');
+            $(targetClass).addClass('active');
+            var activeIndex = jlamapp.navigation.menuItems.map(function (x) {
+                return x.sectionClass;
+            }).indexOf(self.activeMenuItem());
+
+
+            // this seems inefficient? todo: refactor
+            jlamapp.navigation.menuItems.forEach(function (value, index) {
+                if (index !== activeIndex) {
+                    var classToHide = '.' + value.sectionClass;
+                    $(classToHide).removeClass('active');
+                    $(classToHide).addClass('hidden');
+                }
+            });
         }
     });
 
 
 
-    this.navigate = function(clickedItem) {
-
+    this.navigate = function (clickedItem) {
+        // any need/eqv to stop properagation?
+        self.activeMenuItem(clickedItem.sectionClass);
     };
 
     this.projects = ko.observableArray();
