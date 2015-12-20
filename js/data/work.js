@@ -30,7 +30,8 @@ jlamdata.workProjects = {
                 "images/hptpm1.jpg",
                 "images/hptpm2.png"
             ],
-            "url": "https://www.hptouchpointmanager.com"
+            "url": "https://www.hptouchpointmanager.com",
+            "highlight": true
         },
         {
             "type": "work",

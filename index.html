@@ -56,10 +56,18 @@
         </div>
         <!-- content part-->
         <!-- TODO: add filter to only show highlighted projects-->
-        <div class="projects hidden" data-bind="foreach: projects">
-            <div data-bind= "text: title"></div>
-            <div data-bind="text: dates"></div>
-            <div data-bind="text: description"></div>
+        <div class="projects hidden" >
+            <div class="projectControls">
+                <input type="checkbox" data-bind="checked: projectFilter" checked>
+                <span>Show highlighted projects only</span>
+            </div>
+            <article class="projectDisplay" data-bind="foreach: filteredProjects">
+                <div class="singleProject" data-bind="css: {visibleProject: $data.highlight === true || $parent.projectFilter()}">
+                    <div data-bind="text: title"></div>
+                    <div data-bind="text: dates"></div>
+                    <div data-bind="text: description"></div>
+                </div>
+            </article>
         </div>
 
         <div class="contact hidden" data-bind="foreach: contacts">

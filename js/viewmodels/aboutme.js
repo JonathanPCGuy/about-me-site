@@ -46,7 +46,25 @@ jlamapp.AboutMeViewModel = function () {
         }
     });
 
+    this.projectFilter = ko.observable(true);
 
+
+    this.filteredProjects = ko.computed(function() {
+        if(self.projectFilter() !== true) {
+            return self.projects();
+        }
+        else
+        {
+            return ko.utils.arrayFilter(self.projects(), function(project) {
+               if(project.highlight === true) {
+                   return true;
+               }
+               else {
+                   return false;
+               }
+            });
+        }
+    }, self, { deferEvaluation: true });
 
     this.navigate = function (clickedItem) {
         // any need/eqv to stop properagation?
