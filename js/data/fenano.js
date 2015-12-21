@@ -25,7 +25,8 @@ jlamdata.fenanoProjects = {
             "dates": "2015",
             "description": "Create a frogger-type game, leveraging provided game engine and assets. Emphasized Javascript coding skills (classes, objects, etc.)",
             "images": [
-                "images/fenano/project3.png"
+                "images/fenano/project3-1.png",
+                "images/fenano/project3-2.png",
             ],
             "url": "link to live version",
             "repo": "link to repo",
@@ -36,9 +37,6 @@ jlamdata.fenanoProjects = {
             "title": "Project 4 - Web Site Optimization",
             "dates": "2015",
             "description": "Optimize the loading and performance of various pages, using a variety of techniques and tools",
-            "images": [
-                "images/fenano/project4.png"
-            ],
             "url": "link to live version",
             "repo": "link to repo"
         },
@@ -60,9 +58,6 @@ jlamdata.fenanoProjects = {
             "title": "Project 6 - Unit tests",
             "dates": "2015",
             "description": "Using Jasmine, build up a suite of specs and tests against the provided web application.",
-            "images": [
-                "images/fenano/project6-1.png",
-            ],
             "url": "link to live version",
             "repo": "link to repo",
             "highlight": true

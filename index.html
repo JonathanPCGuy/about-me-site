@@ -39,24 +39,24 @@
         <div class="row">
             <div class="col-md-3 main-image">
                 <!-- cool picture representing me-->
-                <img src="http://placehold.it/240x200">
+                <img class="col-md-12" src="images/me.jpg">
             </div>
             <div class="col-md-9 menu-items">
                 <div class="row" data-bind="foreach: menuItems">
-                <!-- hi-res assets? -->
-                <div class="col-md-3 menu-item">
-                    <a href="#" data-bind="click: $parent.navigate">
-                    <div class="menu-title" data-bind="text: title"></div>
-                    <img data-bind="attr:{ src: image}">
-                    </a>
-                    <!-- to insert - link -->
-                </div>
+                    <!-- hi-res assets? -->
+                    <div class="col-md-3 menu-item">
+                        <a href="#" data-bind="click: $parent.navigate">
+                            <div class="menu-title" data-bind="text: title"></div>
+                            <img data-bind="attr:{ src: image}">
+                        </a>
+                        <!-- to insert - link -->
+                    </div>
                 </div>
             </div>
         </div>
         <!-- content part-->
         <!-- TODO: add filter to only show highlighted projects-->
-        <div class="projects hidden" >
+        <div class="projects hidden">
             <div class="projectControls">
                 <input type="checkbox" data-bind="checked: projectFilter" checked>
                 <span>Show highlighted projects only</span>
@@ -66,6 +66,14 @@
                     <div data-bind="text: title"></div>
                     <div data-bind="text: dates"></div>
                     <div data-bind="text: description"></div>
+                    <div data-bind="if: $data.images">
+                        <div data-bind="foreach: images">
+                            <figure>
+                                <img data-bind="attr: {src: $data}">
+                            </figure>
+                        </div>
+                    </div>
+                    <a data-bind="attr: {href: url}" target="_blank"><span data-bind="text: url"></span></a>
                 </div>
             </article>
         </div>
@@ -79,17 +87,22 @@
             <div data-bind="text: aboutMeText"></div>
             <div class="workHistory" data-bind="foreach:jlamdata.workHistory">
                 <div class="workItem">
-                    <div class="companyName"  data-bind="text:employer"></div>
+                    <div class="companyName" data-bind="text:employer"></div>
                     <div class="jobTitle" data-bind="text:title"></div>
                     <div class="jobLocation" data-bind="text: location"></div>
                     <div class="jobDates" data-bind="text: dates"></div>
                     <div class="jobDescription" data-bind="text: description"></div>
                 </div>
             </div>
-
-    </div>
-    <div class="tbd hidden">
-    </div>
+            <h2>Attributions</h2>
+            <ul class="attributions" data-bind="foreach: jlamdata.attribution">
+                <li class="attribution">
+                    <a target="_blank" data-bind="attr: {href: url}"><span data-bind="text: project"></span></a> - <a target="_blank" data-bind="attr: {href: licenseUrl}"><span data-bind="text: license"></span></a>
+                </li>
+            </ul>
+        </div>
+        <div class="tbd hidden">
+        </div>
 </body>
 <!-- footer? -->
 
