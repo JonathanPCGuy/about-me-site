@@ -18,6 +18,40 @@
   justify-content: center;
 }
 
+.rounded-image {
+    border-radius:25%;
+    max-height: 250px;
+}
+
 .hidden {
     display: none;
+}
+
+.projectControls h1{
+    font-size: 12pt;
+}
+
+.rowBox {
+    border: 1px solid lightgray;
+    border-radius: 25px;
+    margin: 5px 0 5px 0;
+    padding: 5px;
+}
+
+.singleProject h1{
+    font-size:1.5em;
+}
+
+.singleProject h2 {
+    font-size:1em;
+    margin:0;
+    font-style: italic;
+}
+
+.singleProject h3 {
+    font-size:1em;
+}
+
+html {
+  overflow-y: scroll;
 }

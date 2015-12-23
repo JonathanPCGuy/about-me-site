@@ -4,10 +4,19 @@ jlamapp.AboutMeViewModel = function () {
     // first direct load, later on load some other way...
     var self = this;
 
-    var projectTypes = ko.observableArray([
-        { 'key': 'fenano', 'displayName': 'Udacity Front-End Nanodegree' },
-        { 'key': 'hpwork', 'displayName': 'HP Inc.' }
-    ]);
+    this.projectTypes = {
+        'fenano':'Udacity Front-End Nanodegree',
+        'hpwork':'HP Inc.'
+    };
+
+    this.projectTypeText = function(item) {
+      if(self.projectTypes.hasOwnProperty(item.type)) {
+          return self.projectTypes[item.type];
+      }
+      else {
+          return '';
+      }
+    };
 
     // this seems to create a "pointer" to the underlying object
     this.menuItems = ko.observableArray(jlamapp.navigation.menuItems);

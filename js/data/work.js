@@ -22,7 +22,7 @@ jlamdata.workProjects = {
 
     "projects": [
         {
-            "type": "work",
+            "type": "hpwork",
             "title": "HP Touchpoint Manager",
             "dates": "January 2014 - current",
             "description": "Cloud-based Manageability solution. Worked on various client and server side components.",
@@ -34,7 +34,7 @@ jlamdata.workProjects = {
             "highlight": true
         },
         {
-            "type": "work",
+            "type": "hpwork",
             "title": "HP Client Integration Kit for Microsoft SCCM",
             "dates": "2013",
             "description": "Plugin for Microsoft's System Center Configuration Manager to enhance bare-metal image deployment for HP computers.",

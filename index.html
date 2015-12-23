@@ -28,55 +28,62 @@
         <!-- header part-->
         <div class="row">
             <div class="col-md-2 logo">
-                <img src="http://placehold.it/96x96">
+
             </div>
-            <div class="col-md-10 name-title">
+            <header class="col-md-10 name-title">
                 <h1>Jonathan Lam</h1>
                 <h2>Software Engineer</h2>
-            </div>
+            </header>
         </div>
         <!-- menu part-->
         <div class="row">
             <div class="col-md-3 main-image">
                 <!-- cool picture representing me-->
-                <img class="col-md-12" src="images/me.jpg">
+                <img class="img-responsive rounded-image" src="images/me.jpg">
             </div>
             <div class="col-md-9 menu-items">
                 <div class="row" data-bind="foreach: menuItems">
                     <!-- hi-res assets? -->
-                    <div class="col-md-3 menu-item">
+                    <nav class="col-md-3 menu-item">
                         <a href="#" data-bind="click: $parent.navigate">
                             <div class="menu-title" data-bind="text: title"></div>
                             <img data-bind="attr:{ src: image}">
                         </a>
                         <!-- to insert - link -->
-                    </div>
+                    </nav>
                 </div>
             </div>
         </div>
         <!-- content part-->
         <!-- TODO: add filter to only show highlighted projects-->
-        <div class="projects hidden">
-            <div class="projectControls">
-                <input type="checkbox" data-bind="checked: projectFilter" checked>
-                <span>Show highlighted projects only</span>
-            </div>
-            <article class="projectDisplay" data-bind="foreach: filteredProjects">
+        <article class="projects hidden ">
+            <nav class="projectControls row">
+                <h1 class="col-md-12">
+                    <input type="checkbox" data-bind="checked: projectFilter" checked>
+                    <span>Show highlighted projects only</span>
+                </h1>
+            </nav>
+            <section class="projectDisplay row " data-bind="foreach: filteredProjects">
                 <div class="singleProject" data-bind="css: {visibleProject: $data.highlight === true || $parent.projectFilter()}">
-                    <div data-bind="text: title"></div>
-                    <div data-bind="text: dates"></div>
-                    <div data-bind="text: description"></div>
-                    <div data-bind="if: $data.images">
-                        <div data-bind="foreach: images">
-                            <figure>
-                                <img data-bind="attr: {src: $data}">
-                            </figure>
+                    <div class="col-md-12 rowBox">
+                        <section class="col-md-6">
+                            <h1 data-bind="text: title"></h1>
+                            <h2 data-bind="text: $parent.projectTypeText($data)"></h2>
+                            <h3 data-bind="text: dates"></h2>
+                            <h3 data-bind="text: description"></h3>
+                            <a data-bind="attr: {href: url}" target="_blank"><span data-bind="text: url"></span></a>
+                        </section>
+                        <div data-bind="if: $data.images" class="col-md-6">
+                            <div data-bind="foreach: images" class="row">
+                                <figure class="col-md-6">
+                                    <img data-bind="attr: {src: $data}" class="img-responsive">
+                                </figure>
+                            </div>
                         </div>
                     </div>
-                    <a data-bind="attr: {href: url}" target="_blank"><span data-bind="text: url"></span></a>
                 </div>
-            </article>
-        </div>
+            </section>
+        </article>
 
         <div class="contact hidden" data-bind="foreach: contacts">
             <a target="_blank" data-bind="text:title, attr:{href: url }"></a>
@@ -97,7 +104,8 @@
             <h2>Attributions</h2>
             <ul class="attributions" data-bind="foreach: jlamdata.attribution">
                 <li class="attribution">
-                    <a target="_blank" data-bind="attr: {href: url}"><span data-bind="text: project"></span></a> - <a target="_blank" data-bind="attr: {href: licenseUrl}"><span data-bind="text: license"></span></a>
+                    <a target="_blank" data-bind="attr: {href: url}"><span data-bind="text: project"></span></a> - <a target="_blank"
+                    data-bind="attr: {href: licenseUrl}"><span data-bind="text: license"></span></a>
                 </li>
             </ul>
         </div>
