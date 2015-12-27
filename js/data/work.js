@@ -3,19 +3,20 @@ var jlamdata = jlamdata || {};
 jlamdata.workHistory = [
 
     {
-        "employer": "Hewlett-Packard",
+        "employer": "HP Inc.",
+        "title": "C++ and Web Engineer",
+        "location": "Houston, TX",
+        "dates": "November 2013 - current",
+        "description": "Working on a cloud-based manageability solution (client and cloud-side)"
+    },
+    {
+        "employer": "HP Inc.",
         "title": "Software Engineer",
         "location": "Houston, TX",
         "dates": "May 2007 - November 2013",
-        "description": "Manageability Software"
-    },
-    {
-        "employer": "Hewlett-Packard",
-        "title": "Senior Software Engineer",
-        "location": "Houston, TX",
-        "dates": "November 2013 - current",
-        "description": "Manageability Software"
+        "description": "Worked on various manageability tools designed for HP business PCs"
     }
+
 ];
 
 jlamdata.workProjects = {

@@ -2,8 +2,15 @@
   text-align: right;
 }
 
-.menu-item {
+
+.menu-item, .menu-title, .menu-icon {
   padding: 1em;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.active-menu-item {
+  background-color: lightslategrey;
 }
 
 .project-row {
@@ -38,19 +45,28 @@
     padding: 5px;
 }
 
-.singleProject h1{
+h1{
     font-size:1.5em;
 }
 
-.singleProject h2 {
+.aboutMeSection {
+    padding: 5px;
+}
+
+.workItem h1 {
+    font-size:1.25em;
+}
+
+h2 {
     font-size:1em;
     margin:0;
     font-style: italic;
 }
 
-.singleProject h3 {
+h3 {
     font-size:1em;
 }
+
 
 html {
   overflow-y: scroll;

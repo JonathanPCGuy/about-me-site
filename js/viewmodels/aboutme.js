@@ -19,16 +19,25 @@ jlamapp.AboutMeViewModel = function () {
     };
 
     // this seems to create a "pointer" to the underlying object
+    // add an active observable field before we load into obs array
+    jlamapp.navigation.menuItems.forEach(function(v,i,a) {
+       a[i].active = ko.observable(false);
+    });
     this.menuItems = ko.observableArray(jlamapp.navigation.menuItems);
+
+
 
     // TODO: single-page "print" view
 
     // null - nothing (initial page load)
     // "all" - show all (to be done)
+
+
+
     this.activeMenuItem = ko.observable();
 
     this.setActiveMenuItem = ko.computed(function () {
-        if (self.activeMenuItem() === "undefined") {
+        if (typeof self.activeMenuItem() === 'undefined') {
             // don't do anything?
         }
         else if (self.activeMenuItem() === "all") {
@@ -36,20 +45,25 @@ jlamapp.AboutMeViewModel = function () {
         }
         else {
             // show one, hide the rest
-            var targetClass = '.' + self.activeMenuItem();
+            var targetClass = '.' + self.activeMenuItem().sectionClass;
             $(targetClass).removeClass('hidden');
             $(targetClass).addClass('active');
             var activeIndex = jlamapp.navigation.menuItems.map(function (x) {
                 return x.sectionClass;
-            }).indexOf(self.activeMenuItem());
+            }).indexOf(self.activeMenuItem().sectionClass);
 
 
             // this seems inefficient? todo: refactor
             jlamapp.navigation.menuItems.forEach(function (value, index) {
                 if (index !== activeIndex) {
+                    self.menuItems()[index].active(false);
                     var classToHide = '.' + value.sectionClass;
+                    // todo: refactor to use knockout?
                     $(classToHide).removeClass('active');
                     $(classToHide).addClass('hidden');
+                }
+                else {
+                    self.menuItems()[index].active(true);
                 }
             });
         }
@@ -77,7 +91,7 @@ jlamapp.AboutMeViewModel = function () {
 
     this.navigate = function (clickedItem) {
         // any need/eqv to stop properagation?
-        self.activeMenuItem(clickedItem.sectionClass);
+        self.activeMenuItem(clickedItem);
     };
 
     this.projects = ko.observableArray();

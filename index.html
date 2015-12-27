@@ -44,13 +44,15 @@
             <div class="col-md-9 menu-items">
                 <div class="row" data-bind="foreach: menuItems">
                     <!-- hi-res assets? -->
-                    <nav class="col-md-3 menu-item">
-                        <a href="#" data-bind="click: $parent.navigate">
-                            <div class="menu-title" data-bind="text: title"></div>
-                            <img data-bind="attr:{ src: image}">
-                        </a>
-                        <!-- to insert - link -->
-                    </nav>
+                    <div class="col-md-3 menu-item-container">
+                        <nav class="menu-item" data-bind="css: {'active-menu-item': $data.active() === true }">
+                            <a href="#" data-bind="click: $parent.navigate">
+                                <div class="menu-title" data-bind="text: title"></div>
+                                <img class="menu-icon" data-bind="attr:{ src: image}">
+                            </a>
+                            <!-- to insert - link -->
+                        </nav>
+                    </div>
                 </div>
             </div>
         </div>
@@ -85,31 +87,35 @@
             </section>
         </article>
 
-        <div class="contact hidden" data-bind="foreach: contacts">
+        <article class="contact hidden" data-bind="foreach: contacts">
             <a target="_blank" data-bind="text:title, attr:{href: url }"></a>
             <img data-bind="attr:{src:logo}">
-        </div>
+        </article>
 
-        <div class="aboutMe hidden">
-            <div data-bind="text: aboutMeText"></div>
+        <article class="aboutMe hidden row">
+            <div data-bind="text: aboutMeText" class="col-md-12 aboutMeSection"></div>
+            <h1 class="col-md-12">Work History</h1>
             <div class="workHistory" data-bind="foreach:jlamdata.workHistory">
-                <div class="workItem">
-                    <div class="companyName" data-bind="text:employer"></div>
-                    <div class="jobTitle" data-bind="text:title"></div>
-                    <div class="jobLocation" data-bind="text: location"></div>
-                    <div class="jobDates" data-bind="text: dates"></div>
-                    <div class="jobDescription" data-bind="text: description"></div>
-                </div>
+                <section class="workItem col-md-12 rowBox">
+                    <h1><span data-bind="text:employer"></span> - <span data-bind="text:title"></span></h1>
+                    <h1 class="jobTitle" "></h1>
+                    <h3 class="jobLocation " data-bind="text: location "></h3>
+                    <h2 class="jobDates " data-bind="text: dates "></h2>
+                    <h2 class="jobDescription " data-bind="text: description "></h2>
+                </section>
             </div>
-            <h2>Attributions</h2>
-            <ul class="attributions" data-bind="foreach: jlamdata.attribution">
-                <li class="attribution">
-                    <a target="_blank" data-bind="attr: {href: url}"><span data-bind="text: project"></span></a> - <a target="_blank"
-                    data-bind="attr: {href: licenseUrl}"><span data-bind="text: license"></span></a>
+            <section>
+            <h1 class="col-md-12 ">Site Attributions</h1>
+            <ul class="attributions col-md-12 " data-bind="foreach: jlamdata.attribution ">
+                <li class="attribution ">
+                    <a target="_blank " data-bind="attr: {href: url} "><span data-bind="text: project
+                    "></span></a> - <a target="_blank "
+                    data-bind="attr: {href: licenseUrl} "><span data-bind="text: license "></span></a>
                 </li>
             </ul>
-        </div>
-        <div class="tbd hidden">
+            </section>
+        </article>
+        <div class="tbd hidden ">
         </div>
 </body>
 <!-- footer? -->
