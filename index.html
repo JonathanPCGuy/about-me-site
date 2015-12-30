@@ -58,7 +58,7 @@
         </div>
         <!-- content part-->
         <!-- TODO: add filter to only show highlighted projects-->
-        <article class="projects hidden ">
+        <article class="projects siteSection hidden ">
             <nav class="projectControls row">
                 <h1 class="col-md-12">
                     <input type="checkbox" data-bind="checked: projectFilter" checked>
@@ -87,12 +87,14 @@
             </section>
         </article>
 
-        <article class="contact hidden" data-bind="foreach: contacts">
-            <a target="_blank" data-bind="text:title, attr:{href: url }"></a>
-            <img data-bind="attr:{src:logo}">
+        <article class="contact siteSection hidden row" data-bind="foreach: contacts">
+            <section class="col-md-3 contactOption">
+                <a target="_blank" data-bind="text:title, attr:{href: url }"></a>
+                <img data-bind="attr:{src:logo}" class="contactLogo img-responsive">
+            </section>
         </article>
 
-        <article class="aboutMe hidden row">
+        <article class="aboutMe siteSection hidden row">
             <div data-bind="text: aboutMeText" class="col-md-12 aboutMeSection"></div>
             <h1 class="col-md-12">Work History</h1>
             <div class="workHistory" data-bind="foreach:jlamdata.workHistory">
