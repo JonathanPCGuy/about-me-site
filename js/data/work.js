@@ -4,6 +4,7 @@ jlamdata.workHistory = [
 
     {
         "employer": "HP Inc.",
+        "url": "http://www.hp.com",
         "title": "C++ and Web Engineer",
         "location": "Houston, TX",
         "dates": "November 2013 - current",
@@ -11,6 +12,7 @@ jlamdata.workHistory = [
     },
     {
         "employer": "HP Inc.",
+        "url": "http://www.hp.com",
         "title": "Software Engineer",
         "location": "Houston, TX",
         "dates": "May 2007 - November 2013",
@@ -18,6 +20,26 @@ jlamdata.workHistory = [
     }
 
 ];
+
+jlamdata.education = {
+    "schools": [
+        {
+            "name": "Texas A&M",
+            "location": "College Station, TX",
+            "major": "Computer Engineering, B.S.",
+            "dates": 2007,
+            "url": "http://www.tamu.edu"
+        }
+    ],
+    "onlineCourses": [
+        {
+            "title": "Front-End Nanodegree",
+            "school": "Udacity",
+            "date": "2015",
+            "url": "https://www.udacity.com/course/nd001"
+        }
+    ]
+};
 
 jlamdata.workProjects = {
 
