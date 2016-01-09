@@ -36,22 +36,37 @@
             </header>
         </div>
         <!-- menu part-->
-        <div class="row">
-            <div class="col-md-3 main-image">
+        <div class="row topRow">
+            <div class="col-md-3 col-xs-3 main-image">
                 <!-- cool picture representing me-->
                 <img class="img-responsive rounded-image" src="images/me.jpg">
             </div>
-            <div class="col-md-9 menu-items">
+            <div class="col-md-9 hidden-xs hidden-sm menu-items">
                 <div class="row" data-bind="foreach: menuItems">
                     <!-- hi-res assets? -->
-                    <div class="col-md-4 menu-item-container">
+                    <div class="col-md-4 col-xs-4 menu-item-container">
                         <nav class="menu-item" data-bind="css: {'active-menu-item': $data.active() === true }">
                             <a href="#" data-bind="click: $parent.navigate">
                                 <div class="menu-title" data-bind="text: title"></div>
                                 <img class="menu-icon" data-bind="attr:{ src: image}">
                             </a>
-                            <!-- to insert - link -->
                         </nav>
+                    </div>
+                </div>
+            </div>
+            <!-- todo: find a better way to optimize this?-->
+            <div class="col-xs-9 visible-sm-block visible-xs-block menu-items">
+                <div class="row" data-bind="foreach: menuItems">
+                    <!-- hi-res assets? -->
+                    <div class="col-xs-12 col-sm-12 menu-item-container">
+                        <div class="row">
+                            <nav class="menu-item" data-bind="css: {'active-menu-item': $data.active() === true }">
+                                <a href="#" data-bind="click: $parent.navigate">
+                                    <img class="menu-icon col-xs-2 col-sm-2" data-bind="attr:{ src: image}">
+                                    <div class="menu-title col-xs-10 col-sm-10" data-bind="text: title"></div>
+                                </a>
+                            </nav>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -98,31 +113,29 @@
             <div data-bind="text: aboutMeText" class="col-md-12 aboutMeSection"></div>
             <h1 class="col-md-12">Work History</h1>
             <div class="workHistory" data-bind="foreach:jlamdata.workHistory">
-                <section class="workItem col-md-12 rowBox">
-                    <h1><span data-bind="text:employer"></span> - <span data-bind="text:title"></span></h1>
-                    <a data-bind="attr:{ href: url}" target="_blank"><h2 data-bind="text: url"></h2></a>
-                    <h3 class="jobLocation " data-bind="text: location "></h3>
-                    <h2 class="jobDates " data-bind="text: dates "></h2>
-                    <h2 class="jobDescription " data-bind="text: description "></h2>
+                <section class="workItem col-md-5 rowBox">
+                    <h1 class="rowBoxText"><span data-bind="text:employer"></span> - <span data-bind="text:title"></span></h1>
+                    <a data-bind="attr:{ href: url}" target="_blank"><h2 data-bind="text: url" class="rowBoxText"></h2></a>
+                    <h3 class="jobLocation rowBoxText" data-bind="text: location "></h3>
+                    <h2 class="jobDates rowBoxText" data-bind="text: dates "></h2>
+                    <h2 class="jobDescription rowBoxText" data-bind="text: description "></h2>
                 </section>
             </div>
             <h1 class="col-md-12">Education</h1>
             <div class="education">
                 <section class="schools" data-bind="foreach:jlamdata.education.schools">
-                    <div class="schoolItem col-md-12 rowBox">
-                        <h1 data-bind="text: name"></h1>
-                        <a data-bind="attr:{ href: url}" target="_blank"><h2 data-bind="text: url"></h2></a>
-                        <h3 data-bind="text: location"></h3>
-                        <h2 data-bind="text: major"></h2>
-                        <h2 data-bind="text: dates"></h2>
+                    <div class="schoolItem col-md-5 rowBox">
+                        <h1 data-bind="text: name" class="rowBoxText"></h1>
+                        <h3 data-bind="text: location" class="rowBoxText"></h3>
+                        <h2 class="rowBoxText"><span data-bind="text: major"></span> - <span data-bind="text:dates"></span></h2>
+                        <a data-bind="attr:{ href: url}" target="_blank"><h2 data-bind="text: url" class="rowBoxText"></h2></a>
                     </div>
                 </section>
                 <section class="onlineCourses" data-bind="foreach: jlamdata.education.onlineCourses">
-                    <div class="onlineCourse col-md-12 rowBox">
-                        <h1 data-bind="text: title"></h1>
-                        <a data-bind="attr:{ href: url}" target="_blank"><h2 data-bind="text: url"></h2></a>
-                        <h2 data-bind="text: school"></h2>
-                        <h3 data-bind="text: date"></h3>
+                    <div class="onlineCourse col-md-5 rowBox">
+                        <h1 data-bind="text: school" class="rowBoxText"></h1>
+                        <h2 class="rowBoxText"><span data-bind="text: title"></span> - <span data-bind="text: date"></span></h2>
+                        <a data-bind="attr:{ href: url}" target="_blank"><h2 data-bind="text: url" class="rowBoxText"></h2></a>
                     </div>
                 </section>
             </div>

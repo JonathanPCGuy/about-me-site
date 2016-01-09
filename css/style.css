@@ -10,14 +10,22 @@ html {
     margin-top: 10px;
 }
 
+.topRow {
+    margin-top: 10px;
+}
+
 .menu-item, .menu-title, .menu-icon {
   padding: 1em;
   margin: 0 auto;
   text-align: center;
 }
 
+.menu-items {
+    margin-top:
+}
+
 .active-menu-item {
-  background-color: lightslategrey;
+  background-color: #d6d6d6
 }
 
 .project-row {
@@ -47,7 +55,7 @@ html {
 
 .rowBox {
     border: 1px solid lightgray;
-    border-radius: 25px;
+    border-radius: 20px;
     margin: 5px 0 5px 0;
     padding: 5px;
 }
@@ -62,10 +70,20 @@ h1{
 
 .aboutMeSection {
     padding: 5px;
+    margin: 5px;
 }
 
 .workItem h1 {
     font-size:1.25em;
+}
+
+.workItem, .schoolItem, .onlineCourse {
+    margin: 5px;
+    padding-bottom: 15px;
+}
+
+.rowBoxText {
+    margin: 10px 0;
 }
 
 .contactOption {
