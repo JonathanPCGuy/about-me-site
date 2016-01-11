@@ -37,14 +37,14 @@
         </div>
         <!-- menu part-->
         <div class="row topRow">
-            <div class="col-md-3 col-xs-3 main-image">
+            <div class="col-md-3 col-xs-3 col-sm-3 main-image">
                 <!-- cool picture representing me-->
                 <img class="img-responsive rounded-image" src="images/me.jpg">
             </div>
             <div class="col-md-9 hidden-xs hidden-sm menu-items">
                 <div class="row" data-bind="foreach: menuItems">
                     <!-- hi-res assets? -->
-                    <div class="col-md-4 col-xs-4 menu-item-container">
+                    <div class="col-md-4 menu-item-container">
                         <nav class="menu-item" data-bind="css: {'active-menu-item': $data.active() === true }">
                             <a href="#" data-bind="click: $parent.navigate">
                                 <div class="menu-title" data-bind="text: title"></div>
@@ -55,19 +55,19 @@
                 </div>
             </div>
             <!-- todo: find a better way to optimize this?-->
-            <div class="col-xs-9 visible-sm-block visible-xs-block menu-items">
-                <div class="row" data-bind="foreach: menuItems">
+            <div class="col-xs-9 col-sm-9 visible-sm-block visible-xs-block menu-items">
+                <div data-bind="foreach: menuItems">
                     <!-- hi-res assets? -->
-                    <div class="col-xs-12 col-sm-12 menu-item-container">
-                        <div class="row">
-                            <nav class="menu-item" data-bind="css: {'active-menu-item': $data.active() === true }">
-                                <a href="#" data-bind="click: $parent.navigate">
-                                    <img class="menu-icon col-xs-2 col-sm-2" data-bind="attr:{ src: image}">
-                                    <div class="menu-title col-xs-10 col-sm-10" data-bind="text: title"></div>
-                                </a>
-                            </nav>
-                        </div>
+                    <div class="menu-item-container row">
+                        <nav class="menu-item" data-bind="css: {'active-menu-item': $data.active() === true }">
+                            <a href="#" data-bind="click: $parent.navigate">
+                                <figure class="menu-icon-smaller col-xs-4 col-sm-4 " data-bind="style: {backgroundImage: 'url(' + image + ')'}"></figure>
+                                <div class="menu-title col-xs-8 col-sm-8" data-bind="text: title"></div>
+                                <!-- <img class="menu-icon img-responsive" data-bind="attr:{ src: image}">-->
+                            </a>
+                        </nav>
                     </div>
+                    <!---->
                 </div>
             </div>
         </div>
@@ -144,8 +144,8 @@
                 <ul class="attributions col-md-12 " data-bind="foreach: jlamdata.attribution ">
                     <li class="attribution ">
                         <a target="_blank " data-bind="attr: {href: url} "><span data-bind="text: project
-                        "></span></a> - <a target="_blank "
-                        data-bind="attr: {href: licenseUrl} "><span data-bind="text: license "></span></a>
+                        "></span></a> -
+                        <a target="_blank " data-bind="attr: {href: licenseUrl} "><span data-bind="text: license "></span></a>
                     </li>
                 </ul>
             </section>

@@ -2,6 +2,7 @@ html {
   overflow-y: scroll;
 }
 
+
 .name-title {
   text-align: right;
 }
@@ -18,6 +19,13 @@ html {
   padding: 1em;
   margin: 0 auto;
   text-align: center;
+}
+
+.menu-icon-smaller {
+    min-height: 64px;
+    max-height: 64px;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .menu-items {
