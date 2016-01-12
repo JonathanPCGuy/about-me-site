@@ -8,7 +8,8 @@ jlamdata.bio = function () {
 
 // TODO: move this
 jlamdata.attribution = [
-  {project: 'Ballicons', license: 'Creative Commons Attribution 3.0 Unported (CC BY 3.0)', url: 'http://ballicons.net/', licenseUrl: 'http://creativecommons.org/licenses/by/3.0/'},
   {project: 'jQuery', license: 'MIT License', url: 'https://jquery.org', licenseUrl: 'https://jquery.org/license/'},
+  {project: 'Bootstrap 3', license: 'MIT License', url: 'http://getbootstrap.com/', licenseUrl: 'https://github.com/twbs/bootstrap/blob/master/LICENSE'},
+  {project: 'Ballicons', license: 'Creative Commons Attribution 3.0 Unported (CC BY 3.0)', url: 'http://ballicons.net/', licenseUrl: 'http://creativecommons.org/licenses/by/3.0/'},
   {project: 'Mail icon made by Simpleicon', license:"Creative Commons BY 3.0", url:'http://www.flaticon.com/authors/simpleicon', licenseUrl:'http://creativecommons.org/licenses/by/3.0/'}
 ];

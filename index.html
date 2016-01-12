@@ -55,18 +55,16 @@
                 </div>
             </div>
             <!-- todo: find a better way to optimize this?-->
-            <div class="col-xs-9 col-sm-9 visible-sm-block visible-xs-block menu-items">
+            <div class="col-xs-9 col-sm-9 visible-sm-block visible-xs-block menu-items row">
                 <div data-bind="foreach: menuItems">
                     <!-- hi-res assets? -->
-                    <div class="menu-item-container row">
-                        <nav class="menu-item" data-bind="css: {'active-menu-item': $data.active() === true }">
-                            <a href="#" data-bind="click: $parent.navigate">
-                                <figure class="menu-icon-smaller col-xs-4 col-sm-4 " data-bind="style: {backgroundImage: 'url(' + image + ')'}"></figure>
-                                <div class="menu-title col-xs-8 col-sm-8" data-bind="text: title"></div>
-                                <!-- <img class="menu-icon img-responsive" data-bind="attr:{ src: image}">-->
-                            </a>
-                        </nav>
-                    </div>
+                    <nav class="menu-item-container responsive-menu-item col-xs-6 col-sm-6" data-bind="css: {'active-menu-item': $data.active() === true }">
+                        <a href="#" data-bind="click: $parent.navigate">
+                            <figure class="menu-icon-smaller col-xs-4 col-sm-4 " data-bind="style: {backgroundImage: 'url(' + image + ')'}"></figure>
+                            <div class="menu-title col-xs-8 col-sm-8" data-bind="text: title"></div>
+                            <!-- <img class="menu-icon img-responsive" data-bind="attr:{ src: image}">-->
+                        </a>
+                    </nav>
                     <!---->
                 </div>
             </div>
@@ -102,11 +100,19 @@
             </section>
         </article>
 
-        <article class="contact siteSection hidden row" data-bind="foreach: contacts">
-            <section class="col-md-3 contactOption">
-                <a target="_blank" data-bind="text:title, attr:{href: url }"></a>
-                <img data-bind="attr:{src:logo}" class="contactLogo img-responsive">
-            </section>
+        <article class="contact siteSection hidden row">
+            <div data-bind="foreach: contacts">
+                <section class="col-md-3 col-sm-3 col-xs-6 contactOption">
+                    <div class="row">
+                        <a target="_blank" data-bind="attr:{href: url }">
+                            <div data-bind="text:title" class="col-md-4 col-sm-5 col-xs-4"></div>
+                            <div class="col-md-8 col-sm-7 col-xs-8">
+                                <img data-bind="attr:{src:logo}" class="contactLogo img-responsive">
+                            </div>
+                        </a>
+                    </div>
+                </section>
+            </div>
         </article>
 
         <article class="aboutMe siteSection hidden row">
@@ -150,8 +156,6 @@
                 </ul>
             </section>
         </article>
-        <div class="tbd hidden ">
-        </div>
 </body>
 <!-- footer? -->
 
