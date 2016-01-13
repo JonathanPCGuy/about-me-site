@@ -7,11 +7,11 @@ html {
   text-align: right;
 }
 
-.siteSection {
+site-section {
     margin-top: 10px;
 }
 
-.topRow {
+top-row {
     margin-top: 10px;
 }
 
@@ -31,10 +31,6 @@ html {
 .responsive-menu-item {
     padding:3px;
     padding-top:10px;
-}
-
-.menu-items {
-    margin-top:
 }
 
 .active-menu-item {
@@ -62,11 +58,11 @@ html {
     display: none;
 }
 
-.projectControls h1{
+.project-controls h1{
     font-size: 12pt;
 }
 
-.rowBox {
+.row-box {
     border: 1px solid lightgray;
     border-radius: 20px;
     margin: 5px 0 5px 0;
@@ -81,29 +77,33 @@ h1{
     font-size:1.5em;
 }
 
-.aboutMeSection {
+.about-me-section {
     padding: 5px;
     margin: 5px;
 }
 
-.workItem h1 {
+.work-item h1 {
     font-size:1.25em;
 }
 
-.workItem, .schoolItem, .onlineCourse {
+.work-item, .school-item, .online-course {
     margin: 5px;
     padding-bottom: 15px;
 }
 
-.rowBoxText {
+.row-box-text {
     margin: 10px 0;
 }
 
-.contactOption {
+.contact {
+    margin-top: 10px;
+}
+
+.contact-option {
     max-height:64px;
 }
 
-.contactLogo {
+.contact-logo {
     max-height: 64px;
 }
 
@@ -127,7 +127,7 @@ h3 {
     min-height: 48px;
     }
 
-    .contactLogo {
+    .contact-logo {
         max-height: 48px;
     }
 }

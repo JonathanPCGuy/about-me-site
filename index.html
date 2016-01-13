@@ -36,7 +36,7 @@
             </header>
         </div>
         <!-- menu part-->
-        <div class="row topRow">
+        <div class="row top-row">
             <div class="col-md-3 col-xs-3 col-sm-3 main-image">
                 <!-- cool picture representing me-->
                 <img class="img-responsive rounded-image" src="images/me.jpg">
@@ -71,8 +71,8 @@
         </div>
         <!-- content part-->
         <!-- TODO: add filter to only show highlighted projects-->
-        <article class="projects siteSection hidden ">
-            <nav class="projectControls row">
+        <article class="projects site-section hidden ">
+            <nav class="project-controls row">
                 <h1 class="col-md-12">
                     <input type="checkbox" data-bind="checked: projectFilter" checked>
                     <span>Show highlighted projects only</span>
@@ -80,7 +80,7 @@
             </nav>
             <section class="projectDisplay row " data-bind="foreach: filteredProjects">
                 <div class="singleProject" data-bind="css: {visibleProject: $data.highlight === true || $parent.projectFilter()}">
-                    <div class="col-md-12 rowBox">
+                    <div class="col-md-12 row-box">
                         <section class="col-md-6">
                             <h1 data-bind="text: title"></h1>
                             <h2 data-bind="text: $parent.projectTypeText($data)"></h2>
@@ -100,14 +100,14 @@
             </section>
         </article>
 
-        <article class="contact siteSection hidden row">
+        <article class="contact contact-section site-section hidden row">
             <div data-bind="foreach: contacts">
-                <section class="col-md-3 col-sm-3 col-xs-6 contactOption">
+                <section class="col-md-3 col-sm-3 col-xs-6 contact-option">
                     <div class="row">
                         <a target="_blank" data-bind="attr:{href: url }">
                             <div data-bind="text:title" class="col-md-4 col-sm-5 col-xs-4"></div>
                             <div class="col-md-8 col-sm-7 col-xs-8">
-                                <img data-bind="attr:{src:logo}" class="contactLogo img-responsive">
+                                <img data-bind="attr:{src:logo}" class="contact-logo img-responsive">
                             </div>
                         </a>
                     </div>
@@ -115,33 +115,33 @@
             </div>
         </article>
 
-        <article class="aboutMe siteSection hidden row">
-            <div data-bind="text: aboutMeText" class="col-md-12 aboutMeSection"></div>
+        <article class="aboutMe site-section hidden row">
+            <div data-bind="text: aboutMeText" class="col-md-12 about-me-section"></div>
             <h1 class="col-md-12">Work History</h1>
-            <div class="workHistory" data-bind="foreach:jlamdata.workHistory">
-                <section class="workItem col-md-5 rowBox">
-                    <h1 class="rowBoxText"><span data-bind="text:employer"></span> - <span data-bind="text:title"></span></h1>
-                    <a data-bind="attr:{ href: url}" target="_blank"><h2 data-bind="text: url" class="rowBoxText"></h2></a>
-                    <h3 class="jobLocation rowBoxText" data-bind="text: location "></h3>
-                    <h2 class="jobDates rowBoxText" data-bind="text: dates "></h2>
-                    <h2 class="jobDescription rowBoxText" data-bind="text: description "></h2>
+            <div class="work-history" data-bind="foreach:jlamdata.workHistory">
+                <section class="work-item col-md-5 row-box">
+                    <h1 class="row-box-text"><span data-bind="text:employer"></span> - <span data-bind="text:title"></span></h1>
+                    <a data-bind="attr:{ href: url}" target="_blank"><h2 data-bind="text: url" class="row-box-text"></h2></a>
+                    <h3 class="jobLocation row-box-text" data-bind="text: location "></h3>
+                    <h2 class="jobDates row-box-text" data-bind="text: dates "></h2>
+                    <h2 class="jobDescription row-box-text" data-bind="text: description "></h2>
                 </section>
             </div>
             <h1 class="col-md-12">Education</h1>
             <div class="education">
                 <section class="schools" data-bind="foreach:jlamdata.education.schools">
-                    <div class="schoolItem col-md-5 rowBox">
-                        <h1 data-bind="text: name" class="rowBoxText"></h1>
-                        <h3 data-bind="text: location" class="rowBoxText"></h3>
-                        <h2 class="rowBoxText"><span data-bind="text: major"></span> - <span data-bind="text:dates"></span></h2>
-                        <a data-bind="attr:{ href: url}" target="_blank"><h2 data-bind="text: url" class="rowBoxText"></h2></a>
+                    <div class="school-item col-md-5 row-box">
+                        <h1 data-bind="text: name" class="row-box-text"></h1>
+                        <h3 data-bind="text: location" class="row-box-text"></h3>
+                        <h2 class="row-box-text"><span data-bind="text: major"></span> - <span data-bind="text:dates"></span></h2>
+                        <a data-bind="attr:{ href: url}" target="_blank"><h2 data-bind="text: url" class="row-box-text"></h2></a>
                     </div>
                 </section>
-                <section class="onlineCourses" data-bind="foreach: jlamdata.education.onlineCourses">
-                    <div class="onlineCourse col-md-5 rowBox">
-                        <h1 data-bind="text: school" class="rowBoxText"></h1>
-                        <h2 class="rowBoxText"><span data-bind="text: title"></span> - <span data-bind="text: date"></span></h2>
-                        <a data-bind="attr:{ href: url}" target="_blank"><h2 data-bind="text: url" class="rowBoxText"></h2></a>
+                <section class="online-courses" data-bind="foreach: jlamdata.education.onlineCourses">
+                    <div class="online-course col-md-5 row-box">
+                        <h1 data-bind="text: school" class="row-box-text"></h1>
+                        <h2 class="row-box-text"><span data-bind="text: title"></span> - <span data-bind="text: date"></span></h2>
+                        <a data-bind="attr:{ href: url}" target="_blank"><h2 data-bind="text: url" class="row-box-text"></h2></a>
                     </div>
                 </section>
             </div>
@@ -149,8 +149,7 @@
                 <h1 class="col-md-12 ">Site Attributions</h1>
                 <ul class="attributions col-md-12 " data-bind="foreach: jlamdata.attribution ">
                     <li class="attribution ">
-                        <a target="_blank " data-bind="attr: {href: url} "><span data-bind="text: project
-                        "></span></a> -
+                        <a target="_blank " data-bind="attr: {href: url} "><span data-bind="text: project"></span></a> -
                         <a target="_blank " data-bind="attr: {href: licenseUrl} "><span data-bind="text: license "></span></a>
                     </li>
                 </ul>
