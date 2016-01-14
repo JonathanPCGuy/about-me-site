@@ -6,7 +6,7 @@ var runSequence = require('run-sequence');
 // todo: optimize css
 
 gulp.task('copy-css', function() {
-  return gulp.src(['./css/bootstrap.min.css', './css/style.css'])
+  return gulp.src(['./css/bootstrap.min.css', './css/style.css', './css/lightbox.min.css'])
     .pipe(gulp.dest('./dist/css'));
 });
 

@@ -7,11 +7,13 @@
     <title>Jonathan Lam's Website</title>
     <!-- todo: if needed generate new bootstrap-->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/lightbox.min.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <!-- todo: move to improve loading speed-->
     <script src="js/libs/jQuery.js"></script>
     <script src="js/libs/bootstrap.min.js"></script>
     <script src="js/libs/knockout-3.3.0.js"></script>
+    <script src="js/libs/lightbox.min.js"></script>
     <!-- these should be compiled into 1-->
     <!-- build:js -->
     <script src="js/data/work.js"></script>
@@ -102,8 +104,8 @@
                         </section>
                         <div data-bind="if: $data.images" class="col-md-6">
                             <div data-bind="foreach: images" class="row">
-                                <figure class="col-md-6">
-                                    <img data-bind="attr: {src: $data}" class="img-responsive">
+                                <figure class="col-md-6 col-sm-6 col-xs-6">
+                                    <a data-bind="attr: {href: $data, 'data-lightbox': $parent.title}"><img data-bind="attr: {src: $data}" class="img-responsive"></a>
                                 </figure>
                             </div>
                         </div>
