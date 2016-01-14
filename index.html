@@ -82,13 +82,23 @@
             </nav>
             <section class="projectDisplay row " data-bind="foreach: filteredProjects">
                 <div class="singleProject" data-bind="css: {visibleProject: $data.highlight === true || $parent.projectFilter()}">
-                    <div class="col-md-12 row-box">
+                    <div class="col-md-12 projectBox row-box">
                         <section class="col-md-6">
                             <h1 data-bind="text: title"></h1>
                             <h2 data-bind="text: $parent.projectTypeText($data)"></h2>
                             <h3 data-bind="text: dates"></h2>
                             <h3 data-bind="text: description"></h3>
-                            <a data-bind="attr: {href: url}" target="_blank"><span data-bind="text: url"></span></a>
+                            <!-- ko if: $data.hasOwnProperty("url")-->
+                            <a data-bind="attr: {href: url}" target="_blank">
+                                <span data-bind="if: type!=='work'">Live Project</span>
+                                <div data-bind="if: type==='work'">
+                                <span data-bind="text: url"></span>
+                                </div>
+                                </a>
+                            <!-- /ko-->
+                            <!-- ko if: $data.hasOwnProperty("repo")-->
+                            <a data-bind="attr: {href: repo}" target="_blank">Source Code</span></a>
+                            <!-- /ko-->
                         </section>
                         <div data-bind="if: $data.images" class="col-md-6">
                             <div data-bind="foreach: images" class="row">
@@ -107,8 +117,8 @@
                 <section class="col-md-3 col-sm-3 col-xs-6 contact-option">
                     <div class="row">
                         <a target="_blank" data-bind="attr:{href: url }">
-                            <div data-bind="text:title" class="col-md-4 col-sm-5 col-xs-4"></div>
-                            <div class="col-md-8 col-sm-7 col-xs-8">
+                            <div data-bind="text:title" class="col-md-4 col-sm-5 col-xs-6"></div>
+                            <div class="col-md-8 col-sm-7 col-xs-6">
                                 <img data-bind="attr:{src:logo}" class="contact-logo img-responsive">
                             </div>
                         </a>
@@ -147,10 +157,10 @@
                     </div>
                 </section>
             </div>
-            <section>
-                <h1 class="col-md-12 ">Site Attributions</h1>
-                <ul class="attributions col-md-12 " data-bind="foreach: jlamdata.attribution ">
-                    <li class="attribution ">
+            <section class="site-attributions">
+                <h1 class="col-md-12">Site Attributions</h1>
+                <ul class="attributions" data-bind="foreach: jlamdata.attribution ">
+                    <li class="attribution col-md-12">
                         <a target="_blank " data-bind="attr: {href: url} "><span data-bind="text: project"></span></a> -
                         <a target="_blank " data-bind="attr: {href: licenseUrl} "><span data-bind="text: license "></span></a>
                     </li>

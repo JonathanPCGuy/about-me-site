@@ -7,8 +7,8 @@ jlamdata.fenanoProjects = {
             "title": "Project 1 - Layout and formatting",
             "dates": "2015",
             "description": "Basic exercise to construct a webpage to match a mockup",
-            "url": "link to live version",
-            "repo": "link to repo",
+            "url": "fenano/project1/index.html",
+            "repo": "https://github.com/JonathanPCGuy/fe-nano-project1",
 
         },
         {
@@ -16,8 +16,8 @@ jlamdata.fenanoProjects = {
             "title": "Project 2 - Online Resume",
             "dates": "2015",
             "description": "Introduction to Javascript, CSS, and DOM manipulation (JQuery). Involved created resulable functions and data sources to create an online resume.",
-            "url": "link to live version",
-            "repo": "link to repo",
+            "url": "fenano/project2/index.html",
+            "repo": "https://github.com/JonathanPCGuy/frontend-nanodegree-resume",
         },
         {
             "type": "fenano",
@@ -28,8 +28,8 @@ jlamdata.fenanoProjects = {
                 "images/fenano/project3-1.png",
                 "images/fenano/project3-2.png",
             ],
-            "url": "link to live version",
-            "repo": "link to repo",
+            "url": "fenano/project3/index.html",
+            "repo": "https://github.com/JonathanPCGuy/frontend-nanodegree-arcade-game",
             "highlight": true
         },
         {
@@ -37,8 +37,7 @@ jlamdata.fenanoProjects = {
             "title": "Project 4 - Web Site Optimization",
             "dates": "2015",
             "description": "Optimize the loading and performance of various pages, using a variety of techniques and tools",
-            "url": "link to live version",
-            "repo": "link to repo"
+            "repo": "https://github.com/JonathanPCGuy/frontend-nanodegree-mobile-portfolio"
         },
         {
             "type": "fenano",
@@ -49,8 +48,8 @@ jlamdata.fenanoProjects = {
                 "images/fenano/project5-1.png",
                 "images/fenano/project5-2.png"
             ],
-            "url": "link to live version",
-            "repo": "link to repo",
+            "url": "fenano/project5/index.html",
+            "repo": "https://github.com/JonathanPCGuy/fenano-project5",
             "highlight": true
         },
         {
@@ -58,8 +57,7 @@ jlamdata.fenanoProjects = {
             "title": "Project 6 - Unit tests",
             "dates": "2015",
             "description": "Using Jasmine, build up a suite of specs and tests against the provided web application.",
-            "url": "link to live version",
-            "repo": "link to repo",
+            "repo": "https://github.com/JonathanPCGuy/frontend-nanodegree-feedreader",
             "highlight": true
         },
 

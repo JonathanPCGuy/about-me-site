@@ -38,6 +38,8 @@ gulp.task('replace-js', function() {
         .pipe(gulp.dest('./dist/'));
 });
 
+//todo: get git repo for live version of projects (this will require a little more thinking)
+
 // callback function/param is for async tasks
 // need to study that later
 gulp.task('build-site', function() {
